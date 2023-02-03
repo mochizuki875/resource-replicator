@@ -1,0 +1,12 @@
+apiVersion: replicate.jnytnai0613.github.io/v1
+kind: ClusterDetector
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterdetector
+    app.kubernetes.io/instance: clusterdetector-sample
+    app.kubernetes.io/part-of: resource-replicator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: resource-replicator
+  name: clusterdetector-sample
+spec:
+  # TODO(user): Add fields here
