@@ -85,13 +85,12 @@ func initCreate() error {
 		setupLog.Error(err, "Failure to read kubeconfig.")
 	}
 
-	var clusterDetector = &replicatev1.ClusterDetector{}
-
-	clusterDetector.SetNamespace("resource-replicator-system")
-
 	ctx := context.Background()
 
 	for _, t := range targetCluster {
+		clusterDetector := &replicatev1.ClusterDetector{}
+		clusterDetector.SetNamespace("resource-replicator-system")
+
 		clusterDetector.SetName(t.ContextName)
 		/////////////////////////////
 		// Create ClusterDetector
